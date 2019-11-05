@@ -1,0 +1,333 @@
+.App {
+  background: linear-gradient(to right, rgb(78, 205, 196), rgb(85, 98, 112));
+}
+code {
+  font-size: 60% !important;
+}
+.post-tag p {
+  background: #595959;
+  color: #fff;
+  padding: 0px 5px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.login-financial {
+  margin: auto;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.82;
+  height: 100%;
+  background-color: white;
+}
+.dashboard-container {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+img {
+  width: 100%;
+}
+
+.landing {
+  position: relative;
+  background: url("./img/develop_high.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin-top: -24px;
+  margin-bottom: -50px;
+}
+.cst-btn-link {
+  text-transform: inherit !important;
+}
+.landing-inner {
+  padding-top: 80px;
+}
+
+.dark-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card-form {
+  opacity: 0.9;
+}
+
+.latest-profiles-img {
+  width: 40px;
+  height: 40px;
+}
+
+.form-control::placeholder {
+  color: #bbb !important;
+}
+.register,
+.login {
+  background: url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg)
+    no-repeat center;
+}
+.login {
+  margin: 100px 0px;
+}
+.register .container,
+.login .container {
+  background: rgba(40, 57, 101, 0.9);
+  width: 530px;
+  margin: auto;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+/* Pagination */
+.pagination {
+  display: inline-block;
+  height: 45px;
+  margin-top: 45px;
+  padding: 0 25px;
+  border-radius: 35px;
+  background-color: #eee;
+}
+@media only screen and (max-width: 1199px) {
+  .pagination {
+    height: 50px;
+    margin-top: 50px;
+    padding: 0 10px;
+    border-radius: 25px;
+  }
+}
+
+.pagination li {
+  display: block;
+  padding: 0 25px;
+  float: left;
+  -webkit-transition: 400ms ease;
+  -o-transition: 400ms ease;
+  transition: 400ms ease;
+  color: #595959;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  line-height: 45px;
+  cursor: pointer;
+}
+.pagination li:hover,
+.pagination li.active {
+  background-color: #86c023;
+  color: #fff;
+}
+.pagination li.active a {
+  color: #fff;
+}
+.pagination li.previous:hover,
+.pagination li.next:hover {
+  background-color: transparent;
+  color: #86c023;
+}
+
+/* Search bar */
+.search-feed {
+  position: relative;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 500px;
+  height: 100px;
+}
+.search-feed .search {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  background: crimson;
+  border-radius: 50%;
+  transition: all 0.5s;
+  z-index: 4;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+}
+.search-feed .search:hover {
+  cursor: pointer;
+}
+.search-feed .search::before {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: 22px;
+  right: 0;
+  bottom: 0;
+  left: 22px;
+  width: 12px;
+  height: 2px;
+  background: white;
+  transform: rotate(45deg);
+  transition: all 0.5s;
+}
+.search-feed .search::after {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: -5px;
+  right: 0;
+  bottom: 0;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: all 0.5s;
+}
+.search-feed input {
+  font-family: "Inconsolata", monospace;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border: none;
+  background: crimson;
+  color: white;
+  text-shadow: 0 0 10px crimson;
+  padding: 0 80px 0 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 25px 0 crimson, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.5s;
+  opacity: 0;
+  z-index: 5;
+  font-weight: bolder;
+  letter-spacing: 0.1em;
+}
+.search-feed input:hover {
+  cursor: pointer;
+}
+.search-feed input:focus {
+  width: 500px;
+  opacity: 1;
+  cursor: text;
+}
+.search-feed input:focus ~ .search {
+  right: -430px;
+  background: #151515;
+  z-index: 6;
+}
+.search-feed input:focus ~ .search::before {
+  top: 0;
+  left: 0;
+  width: 25px;
+}
+.search-feed input:focus ~ .search::after {
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 2px;
+  border: none;
+  background: white;
+  border-radius: 0%;
+  transform: rotate(-45deg);
+}
+.search-feed input::placeholder {
+  color: white;
+  opacity: 0.5;
+  font-weight: bolder;
+}
+.dropdown-flags:after {
+  bottom: 100%;
+  right: 10px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #f9fafc;
+  border-width: 10px;
+  margin-left: -10px;
+}
+.dropdown-flags {
+  right: 35px;
+}
+.dropdown-flags a {
+  cursor: pointer;
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: 400;
+  line-height: 1.42857143;
+  color: #333;
+  white-space: nowrap;
+}
+.dropdown-flags a:hover {
+  background-color: #f4f4f4;
+  color: #000000;
+}
+.sidebar-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sidebar-menu > li {
+  margin: 0;
+  padding: 0;
+}
+.sidebar-menu li a {
+  width: 100%;
+  height: 50px;
+  color: #4f4d5b;
+}
+.sidebar-menu li .fa {
+  width: 20px;
+}
+@media only screen and (max-width: 1199px) {
+  .pagination li {
+    padding: 0 15px;
+    font-size: 16px;
+    line-height: 50px;
+  }
+}
+@media only screen and (min-width: 120px) and (max-width: 1024px) {
+  .pagination li {
+    padding: 0 14px;
+    display: none;
+  }
+  .pagination li:nth-of-type(2) {
+    position: relative;
+    padding-right: 50px;
+  }
+  .pagination li:nth-of-type(2)::after {
+    content: "...";
+    position: absolute;
+    font-size: 25px;
+    top: 0;
+    left: 45px;
+  }
+  .pagination li:nth-child(-n + 3),
+  .pagination li:nth-last-child(-n + 3) {
+    display: block;
+  }
+  .pagination li:nth-last-child(-n + 4) {
+    padding-right: 14px;
+  }
+  .pagination li:nth-last-child(-n + 4)::after {
+    content: none;
+  }
+}
+@media screen and (max-width: 578px) {
+  .register .container,
+  .login .container {
+    width: auto;
+  }
+}

@@ -1,0 +1,100 @@
+import React, { Component } from "react";
+import { Link, withRouter } from "react-router-dom";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { deleteAccount } from "../../actions/profileActions";
+import ManageProfile from "./ManageProfile";
+import Spinner from "../common/Spinner";
+
+class DashboardAdmin extends Component {
+  componentDidMount() {
+    if (this.props.match.path === "/dashboard_admin") {
+      document.getElementById("root-app").style.background = "#f1f2f7";
+    }
+  }
+  componentWillUnmount() {
+    document.getElementById("root-app").style.background =
+      "linear-gradient(to right, rgb(78, 205, 196), rgb(85, 98, 112))";
+  }
+
+  render() {
+    const { user } = this.props.auth;
+    const { profile, loading } = this.props.profile;
+
+    return (
+      <div className="dashboard">
+        <div className="row">
+          <div
+            className="col-md-2"
+            style={{
+              height: "600px",
+              background: "#fff",
+              boxShadow: "5px 0 10px rgba(0,0,0,.1)"
+            }}
+          >
+            <ul
+              id="side-main-menu"
+              className="sidebar-menu sidebar-menu__marginTop"
+            >
+              <li className="py-2">
+                <div className="d-flex">
+                  <Link
+                    className="active d-flex align-items-center main-menu-collapse"
+                    to="/dashboard_admin/manage_profile"
+                    style={{ width: "100%", height: "50px" }}
+                  >
+                    <i className="fa fa-dashboard" />
+                    <span className="pl-2">Manage Profiles</span>
+                  </Link>
+                </div>
+              </li>
+              <li className="py-2">
+                <div className="d-flex">
+                  <a
+                    className="d-flex align-items-center main-menu-collapse"
+                    href="/en/dashboard"
+                    style={{ width: "100%", height: "50px" }}
+                  >
+                    <i className="fa fa-user" />
+                    <span className="pl-2">Manage Posts</span>
+                  </a>
+                </div>
+              </li>
+              <li className="py-2">
+                <div className="d-flex">
+                  <a
+                    className="d-flex align-items-center main-menu-collapse"
+                    href="/en/messages"
+                    style={{ width: "100%", height: "50px" }}
+                  >
+                    <i className="fa fa-comments-o" />
+                    <span className="pl-2">Analysis Report</span>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div className="col-md-10">
+            <ManageProfile />
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+DashboardAdmin.propTypes = {
+  deleteAccount: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+  profile: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  profile: state.profile,
+  auth: state.auth
+});
+
+export default connect(
+  mapStateToProps,
+  { deleteAccount }
+)(withRouter(DashboardAdmin));

@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  height: 100%;
+}
+.container-content {
+  min-height: 100vh;
+  margin-top: 50px;
+}
+.ReactTable .rt-tbody .rt-tr-group {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+/* html {
+  height: 100%;
+}
+#root {
+  height: 100%;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.App {
+  height: 100%;
+}
+.App > .container {
+  margin-top: 50px;
+} */
